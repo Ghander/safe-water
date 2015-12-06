@@ -1,0 +1,59 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Contaminant
+                        </th>
+                        <th>
+                            Health Effects
+                        </th>
+                        <th>
+                            Source
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ctmnt in vm.ctmnts">
+                        
+                        <td >
+                            {{ctmnt.id}}
+                        </td>
+                        <td>
+                           <h4>{{ctmnt.name}}</h4> 
+                        </td>
+                        <td>
+                            {{ctmnt.healtheffects}}
+                        </td>
+                        <td>
+                            {{ctmnt.source}}
+                        </td>
+                    </tr>                                     
+                </tbody>
+            </table>
+            <form ng-submit="main.login()" ng-if="vm.user">
+                <h3>Create an account and make the world a better place!</h3>
+                <div>
+                    <label>User Name:</label>
+                    <input ng-model="main.login.userName" type="text" />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input ng-model="main.login.password" type="password" />
+                </div>
+                <div>
+                    <label>Retype Password:</label>
+                    <input ng-model="main.login.password" type="password" />
+                </div>
+                <div>
+                    <input type="submit" value="Create Account" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
